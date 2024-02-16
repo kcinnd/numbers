@@ -5,7 +5,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Black background */
+    background-color: #000; /* Keep the background black */
 }
 
 #container {
@@ -13,33 +13,35 @@ body, html {
 }
 
 #number {
-    font-size: 250px; /* Large size for visibility */
+    font-size: 250px; /* Keep the size large for visibility */
     font-weight: bold;
-    color: #ff0000; /* Change number color to red */
-    opacity: 0; /* Start invisible for the animation */
-    animation: magicAppearance 4s forwards; /* Extended duration for more complex animation */
+    color: #ff0000; /* Change the number and glow to red */
+    opacity: 0; /* Start with the number invisible */
+    animation: magicAppearance 5s ease-in-out forwards; /* Extend and ease the animation for a smoother effect */
 }
 
 @keyframes magicAppearance {
     0% {
+        transform: scale(0);
         opacity: 0;
-        transform: translateY(20px) scale(0.1);
-        filter: blur(10px);
-        text-shadow: 0 0 0px transparent;
+        filter: blur(20px);
+        text-shadow: 0 0 10px #ff0000;
+    }
+    25% {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
     }
     50% {
+        transform: scale(1.2);
         opacity: 0.5;
-        filter: blur(5px);
-        text-shadow: 0 0 15px #ff0000; /* Initial red glow effect */
+        filter: blur(10px);
     }
-    70% {
-        transform: translateY(-10px) scale(0.8);
-        text-shadow: 0 0 25px #ff0000; /* Increased glow intensity */
+    75% {
+        text-shadow: 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000;
     }
     100% {
+        transform: scale(1);
         opacity: 1;
-        transform: translateY(0) scale(1);
         filter: blur(0);
-        text-shadow: 0 0 30px #ff0000, 0 0 40px #ff0000; /* Final red glow effect with more spread */
+        text-shadow: 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000; /* End with a strong red glow */
     }
 }
