@@ -5,7 +5,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Change background color to black */
+    background-color: #000; /* Black background */
 }
 
 #container {
@@ -15,23 +15,31 @@ body, html {
 #number {
     font-size: 250px; /* Large size for visibility */
     font-weight: bold;
-    color: #ff69b4; /* Change number color to pink */
+    color: #ff0000; /* Change number color to red */
     opacity: 0; /* Start invisible for the animation */
-    /* Animation for the magical appearance */
-    animation: magicAppearance 3s forwards;
+    animation: magicAppearance 4s forwards; /* Extended duration for more complex animation */
 }
 
 @keyframes magicAppearance {
-    from {
+    0% {
         opacity: 0;
-        transform: scale(0.1);
+        transform: translateY(20px) scale(0.1);
         filter: blur(10px);
-        box-shadow: 0 0 0px transparent; /* Start without a shadow */
+        text-shadow: 0 0 0px transparent;
     }
-    to {
+    50% {
+        opacity: 0.5;
+        filter: blur(5px);
+        text-shadow: 0 0 15px #ff0000; /* Initial red glow effect */
+    }
+    70% {
+        transform: translateY(-10px) scale(0.8);
+        text-shadow: 0 0 25px #ff0000; /* Increased glow intensity */
+    }
+    100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0) scale(1);
         filter: blur(0);
-        box-shadow: 0 0 30px #ff69b4; /* Pink glow for a magical effect */
+        text-shadow: 0 0 30px #ff0000, 0 0 40px #ff0000; /* Final red glow effect with more spread */
     }
 }
