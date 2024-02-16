@@ -5,7 +5,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #000; /* Change background color to black */
 }
 
 #container {
@@ -15,7 +15,7 @@ body, html {
 #number {
     font-size: 250px; /* Large size for visibility */
     font-weight: bold;
-    color: #333;
+    color: #ff69b4; /* Change number color to pink */
     opacity: 0; /* Start invisible for the animation */
     /* Animation for the magical appearance */
     animation: magicAppearance 3s forwards;
