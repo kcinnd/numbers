@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const magicNumber = document.getElementById('magicNumber');
-    setTimeout(() => {
-        magicNumber.classList.add('magic');
-    }, 500); // Delay to ensure the user sees the effect
+    // Select the element that displays the number
+    var numberElement = document.getElementById('number');
+
+    // Add a click event listener to that element
+    numberElement.addEventListener('click', function() {
+        // Change the text content of the element to '5' when it's clicked
+        this.textContent = '5';
+    });
 });
