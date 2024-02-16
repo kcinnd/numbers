@@ -11,9 +11,8 @@ body, html {
     font-size: 100px;
     font-weight: bold;
     color: #333;
-    /* Start with the number being invisible */
-    opacity: 0;
-    transform: scale(0);
+    opacity: 1; /* Make visible */
+    transform: scale(1); /* Ensure it's not scaled down */
 }
 
 @keyframes appear {
